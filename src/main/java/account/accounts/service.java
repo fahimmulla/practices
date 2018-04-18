@@ -14,13 +14,14 @@ public class service {
 
 	Map<Integer, account> accountManager = new HashMap<Integer, account>();
 	
-	public void addAccounts (String firstName, String lastName, String accountNumber) {
+	public Map<Integer, account> addAccounts (String firstName, String lastName, String accountNumber) {
 		
 		
 		
 		account accounts = new account(firstName, lastName, accountNumber);
 		accountManager.put(count, accounts);
 		count++;
+		return accountManager;
 		
 		
 	}

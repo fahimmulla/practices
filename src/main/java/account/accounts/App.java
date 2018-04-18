@@ -16,10 +16,10 @@ public class App
       service application = new service();
       
       application.addAccounts("Fahim","Mulla","567");
-      application.addAccounts("Tom","hugh","5627");
-      application.addAccounts("Nick","Morgan","5167");
+//      application.addAccounts("Tom","hugh","5627");
+//      application.addAccounts("Nick","Morgan","5167");
       
-      application.newMap();
+//      application.newMap();
       
       
       
