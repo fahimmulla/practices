@@ -5,19 +5,24 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+
+
+
 public class service {
 	
-	static int id = 1;
+	static int count = 1;
 
-	Map<Integer, account>accountManager = new HashMap<Integer, account>();
+	Map<Integer, account> accountManager = new HashMap<Integer, account>();
 	
 	public void addAccounts (String firstName, String lastName, String accountNumber) {
 		
 		
 		
 		account accounts = new account(firstName, lastName, accountNumber);
-		accountManager.put(id, accounts);
-		id++;
+		accountManager.put(count, accounts);
+		count++;
+		
+		
 	}
 	
 	public void getAccounts(account accounts) {
@@ -29,8 +34,17 @@ public class service {
 		Set<Entry<Integer, account>> hashSet=accountManager.entrySet();
 		for(Entry entry:hashSet) {
 			
-			
 			System.out.println(entry.getKey()+ ", "+ entry.getValue());
+		}
+	}
+	
+	public void showEntry(int num) {
+		Set<Entry<Integer, account>> hashSet=accountManager.entrySet();
+		for(Entry entry:hashSet) {
+			int key = (Integer) entry.getKey();
+        	if(key==num) {
+        		System.out.println(entry.getKey()+ ", " + entry.getValue());
+		}
 		}
 	}
 	
